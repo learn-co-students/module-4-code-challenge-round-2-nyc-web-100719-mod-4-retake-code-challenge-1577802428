@@ -42,9 +42,9 @@ showLogin=()=>{
   }
 
 
-  addPoem=(newPoem)=>{
+  addPoem=(data)=>{
     this.setState({
-      poems: [...this.state.poems, newPoem]
+      poems: [...this.state.poems, data]
     })
   }
 

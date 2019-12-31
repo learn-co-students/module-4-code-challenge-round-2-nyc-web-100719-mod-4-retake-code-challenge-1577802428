@@ -8,7 +8,7 @@ class NewPoemForm extends React.Component {
   }
 
   handleChange=(e)=>{
-    console.log(e.target.name)
+    console.log(e.target.value)
     this.setState({
       [e.target.name]: e.target.value
     })
@@ -20,12 +20,28 @@ class NewPoemForm extends React.Component {
 
   //on submit, call functio addPoem that was passed as props and argument of the new poem
       //newPoem is inputs
+
   handleSubmit=(e)=>{
     e.preventDefault()
-   
-    const newPoem = e.target.value
-    console.log(newPoem)
-    this.props.addPoem(newPoem)
+    let {title,content} = this.state;
+    fetch('http://localhost:3000/poems', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              "Accept": 'application/json'
+          }, 
+          body: JSON.stringify({
+              title,content
+          })
+    })
+    .then(resp=> resp.json())
+    .then(data=>{
+      this.props.addPoem(data)
+    })
+    this.setState({
+        title: '',
+        content: ''
+    })
   }
   
 
