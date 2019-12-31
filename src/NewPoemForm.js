@@ -55,14 +55,13 @@ class NewPoemForm extends React.Component {
     }
   }
 
-
   render(){
     const { title, content } = this.state
     return (
       <div className="new-poem">
         <form className="new-poem-form">
-          <input placeholder="Name your masterpiece..." name="title" value={title} onChange={this.handleTitle}/>
-          <textarea placeholder="Your masterpiece belongs here..." name="content" value={content} onChange={this.handleContent}/>
+          <input placeholder="Name your masterpiece..." value={title} onChange={this.handleTitle}/>
+          <textarea placeholder="Your masterpiece belongs here..." value={content} onChange={this.handleContent}/>
           <input type="submit" value="Share your masterpiece" onClick={this.handleSubmit}/>
         </form>
       </div>

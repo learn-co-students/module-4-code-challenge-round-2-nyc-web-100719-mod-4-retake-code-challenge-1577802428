@@ -35,6 +35,18 @@
       "content": "bailey2 content",
       "author": "bailey2",
       "id": 6
+    },
+    {
+      "title": "a short poem",
+      "content": "roses are red violets are blue\nthis code challenge deserves a PASS\nif not, boo hoo!",
+      "author": "bailey3",
+      "id": 7
+    },
+    {
+      "title": "title",
+      "content": "one more for good measure",
+      "author": "bailey4",
+      "id": 8
     }
   ]
 }
