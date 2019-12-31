@@ -34,7 +34,16 @@ class App extends React.Component {
     poem.author = this.state.username
     let poemsCopy = [...this.state.poems]
     poemsCopy.push(poem)
-    this.setState({poems: poemsCopy})
+    
+    fetch("http://localhost:3000/poems", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(poem)
+    }).then((res)=>{
+      this.setState({poems: poemsCopy})
+    })
   }
 
   render(){
