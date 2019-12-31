@@ -5,23 +5,23 @@ Welcome to Poesy, where your poetry masterpieces come to life! Our old front-end
 
 Your job will be to make our app work according to the following specifications.
 
-## Setup instructions
+## Setup instructions X
 
 Open up 2 terminals and in one, please run `json-server --watch db.json` and in the other run `npm install && npm start`. This should get your servers up and running!
 
 ## Deliverables
 
-1. Display poems from the database
+1. Display poems from the database X 
 
 Our back-end team reports that our API is good to go! Make a GET request to `http://localhost:3000/poems` to fetch poem data. Use this data to render `Poem` components in the `PoemContainer`!
 
-2. Log in / log out
+2. Log in / log out X
 
-Use the `LoginForm` to capture a user's username and then display this username in the `UserHeader`
+X Use the `LoginForm` to capture a user's username and then display this username in the `UserHeader` 
 
-Right now we are displaying both the `LoginForm` and the `UserHeader`, but only one should be showing at any given time - `UserHeader` should only display when a user has been logged in, and `LoginForm` should only display when there is no user. Clicking the log out button on `UserHeader` should clear the user's username and cause the `LoginForm` to reappear.
+Right now we are displaying both the `LoginForm` and the `UserHeader`, but only one should be showing at any given time - `UserHeader` should only display when a user has been logged in, and `LoginForm` should only display when there is no user. Clicking the log out button on `UserHeader` should clear the user's username and cause the `LoginForm` to reappear. X
 
-3. Post poems
+3. Post poems X
 
 There is a form for creating poems inside `NewPoemForm`. When a user submit's a poem, it should be added to the list of poems on the right. You can use the username provided during log in to give the poem its `author` attribute. A user must not be able to do this when they are not logged in!
 
